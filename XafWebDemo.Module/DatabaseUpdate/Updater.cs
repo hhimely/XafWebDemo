@@ -40,7 +40,6 @@ namespace XafWebDemo.Module.DatabaseUpdate {
                 var invoiceFaker = new Faker<Invoice>()
                     .CustomInstantiator(f => new Invoice(((XPObjectSpace)ObjectSpace).Session))
                     .RuleFor(o => o.InvoiceNumber, f => f.Random.AlphaNumeric(10))
-                    .RuleFor(o => o.Description, f => f.Commerce.ProductMaterial())
                     .RuleFor(o => o.InvoiceDate, f => f.Date.Recent());
 
                 System.Collections.Generic.List<Invoice> invoices = invoiceFaker.Generate(5000);

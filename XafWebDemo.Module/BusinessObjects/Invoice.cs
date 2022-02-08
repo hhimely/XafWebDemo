@@ -34,7 +34,6 @@ namespace XafWebDemo.Module.BusinessObjects
         }
 
         string _description;
-        [Size(SizeAttribute.Unlimited)]
         public string Description
         {
             get { return _description; }
